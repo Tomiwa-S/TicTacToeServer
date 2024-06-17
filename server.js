@@ -198,6 +198,6 @@ io.on('connection', (socket) => {
 const generateGameId = () =>  Math.random().toString(36).substring(2,9);
 
 
-server.listen(PORT, '0.0.0.0' () => {
+server.listen(PORT, '0.0.0.0', () => {
     console.log('listening on *:8080');
 });
