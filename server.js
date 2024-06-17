@@ -10,6 +10,8 @@ const io = new Server(server, {
     }
 });
 
+const PORT = process.env.PORT || 8080;
+
 let games = {};
 
  const winningCombinations= [
@@ -196,6 +198,6 @@ io.on('connection', (socket) => {
 const generateGameId = () =>  Math.random().toString(36).substring(2,9);
 
 
-server.listen(8080, () => {
+server.listen(PORT, '0.0.0.0' () => {
     console.log('listening on *:8080');
 });
